@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <style>
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 70px; /* Adjust this value to change the font size */
+        }
+    </style>
+</head>
+<body>
+<html>
+<head>
     <title>Countdown Timer</title>
     <style>
         body {
@@ -13,7 +27,7 @@
             height: 100vh;
         }
         #countdown {
-            font-size: 4em; 
+            font-size: 24em; 
             text-align: center;
         }
         img {
@@ -22,19 +36,20 @@
         }
         .marquee {
             overflow: hidden;
-            position: center;
-            box-sizing: content-box;
-            width: 110%; /* Adjust as needed */
+            position: relative; /* Adjusted from 'center' to 'relative' */
+            box-sizing: border-box; /* Adjusted from 'content-box' to 'border-box' */
+            width: 100%; /* Adjust as needed */
         }
         .marquee h1 {
             display: inline-block;
             position: relative;
             left: 100%;
             animation: marquee 15s linear infinite;
-            font-size: 5em;
+            font-size: 13em;
+            white-space: nowrap; /* Prevents text from wrapping to the next line */
         }
         @keyframes marquee {
-            100% { left: 30%; }
+            0% { left: 100%; }
             100% { left: -100%; }
         }
     </style>
@@ -75,6 +90,10 @@ var countdownFunction = setInterval(function() {
   }
 }, 1000);
 </script>
-
+</body>
+</html>
+<div class="footer">
+        <p>This website was built with the assistance of OpenAI's GPT-4.</p>
+    </div>
 </body>
 </html>
