@@ -3,14 +3,48 @@
 <head>
     <title>Countdown Timer</title>
     <style>
+        body {
+            background-color: black;
+            color: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
         #countdown {
-            font-size: 6em; /* Adjust this value to increase or decrease the font size */
+            font-size: 18em; 
+            text-align: center;
+        }
+        img {
+            width: 20%; 
+            height: auto;
+        }
+        .marquee {
+            overflow: hidden;
+            position: center;
+            box-sizing: content-box;
+            width: 58%; /* Adjust as needed */
+        }
+        .marquee h1 {
+            display: inline-block;
+            position: relative;
+            left: 100%;
+            animation: marquee 15s linear infinite;
+            font-size: 12em;
+        }
+        @keyframes marquee {
+            100% { left: 30%; }
+            100% { left: -100%; }
         }
     </style>
 </head>
 <body>
-
-<p id="countdown"></p>
+    <div class="marquee">
+        <h1>Countdown to the End of Human Civilization</h1>
+    </div>
+    <img src="https://s3.amazonaws.com/www.explorersweb.com/wp-content/uploads/2023/05/17201458/human-evolution.jpg" alt="Human Evolution">
+    <p id="countdown"></p>
 
 <script>
 // Set the date we're counting down to
